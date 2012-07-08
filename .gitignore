@@ -1,0 +1,3 @@
+build
+*.lproj/*~.nib
+.DS_Store

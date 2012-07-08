@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAppleScriptBuildPhase section */
+		9EEC4563149075720024618F /* AppleScript */ = {
+			isa = PBXAppleScriptBuildPhase;
+			buildActionMask = 2147483647;
+			contextName = "";
+			files = (
+				9EEC4564149075720024618F /* ECM GUI.applescript in AppleScript */,
+			);
+			isSharedContext = 0;
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXAppleScriptBuildPhase section */
+
+/* Begin PBXBuildFile section */
+		5544385914907701006CB58A /* ecm.c in Sources */ = {isa = PBXBuildFile; fileRef = 5544385814907701006CB58A /* ecm.c */; };
+		5544385B1490770C006CB58A /* unecm.c in Sources */ = {isa = PBXBuildFile; fileRef = 5544385A1490770C006CB58A /* unecm.c */; };
+		5544385C1490777C006CB58A /* ecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544384614907674006CB58A /* ecm */; };
+		5544385D1490777C006CB58A /* unecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544385014907688006CB58A /* unecm */; };
+		9EDF0B511583F06900DB286C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF0B501583F06900DB286C /* Localizable.strings */; };
+		9EDF0B9E1583F73E00DB286C /* ecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544384614907674006CB58A /* ecm */; };
+		9EDF0B9F1583F74400DB286C /* unecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544385014907688006CB58A /* unecm */; };
+		9EDF0BA01583F75100DB286C /* ecm-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 14F23E4F052FC78D004A24BF /* ecm-icon.icns */; };
+		9EEC4564149075720024618F /* ECM GUI.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA206CF3015C4E8B03C91932 /* ECM GUI.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
+		9EEC4566149075720024618F /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		9EEC4567149075720024618F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		9EEC456A149075720024618F /* ecm-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 14F23E4F052FC78D004A24BF /* ecm-icon.icns */; };
+		9EEC456C149075720024618F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		9EEC456E149075720024618F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		9EEC456F149075720024618F /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
+		9EF22E261561B72B00943CB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF22E241561B72B00943CB6 /* main.m */; };
+		9EF22E2B1561B7A000943CB6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+		9EF22E341561B80500943CB6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EF22E331561B80500943CB6 /* MainMenu.xib */; };
+		9EF22E391561B85600943CB6 /* ECMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF22E381561B85600943CB6 /* ECMAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5544385E14907782006CB58A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5544384514907674006CB58A;
+			remoteInfo = ecm;
+		};
+		5544386014907782006CB58A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5544384F14907688006CB58A;
+			remoteInfo = unecm;
+		};
+		9EF22E271561B78F00943CB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5544384F14907688006CB58A;
+			remoteInfo = unecm;
+		};
+		9EF22E291561B78F00943CB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 29B97313FDCFA39411CA2CEA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5544384514907674006CB58A;
+			remoteInfo = ecm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5544384414907674006CB58A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		5544384E14907688006CB58A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		14F23E4F052FC78D004A24BF /* ecm-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "ecm-icon.icns"; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		5544384614907674006CB58A /* ecm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ecm; sourceTree = BUILT_PRODUCTS_DIR; };
+		5544385014907688006CB58A /* unecm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = unecm; sourceTree = BUILT_PRODUCTS_DIR; };
+		5544385814907701006CB58A /* ecm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ecm.c; sourceTree = "<group>"; };
+		5544385A1490770C006CB58A /* unecm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unecm.c; sourceTree = "<group>"; };
+		9EDF0B4E1583F06200DB286C /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9EEC4574149075730024618F /* Info-ECM_GUI__Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-ECM_GUI__Upgraded_.plist"; sourceTree = "<group>"; };
+		9EEC4575149075730024618F /* ECM GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ECM GUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EF22E181561B6B600943CB6 /* ECM Cocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ECM Cocoa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EF22E1A1561B6B600943CB6 /* ECM Cocoa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ECM Cocoa-Info.plist"; sourceTree = "<group>"; };
+		9EF22E241561B72B00943CB6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9EF22E331561B80500943CB6 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		9EF22E371561B85600943CB6 /* ECMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMAppDelegate.h; sourceTree = "<group>"; };
+		9EF22E381561B85600943CB6 /* ECMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMAppDelegate.m; sourceTree = "<group>"; };
+		DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
+		DA206CF3015C4E8B03C91932 /* ECM GUI.applescript */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.applescript; path = "ECM GUI.applescript"; sourceTree = "<group>"; };
+		DA206CF4015C4E8B03C91932 /* AppleScriptKit.asdictionary */ = {isa = PBXFileReference; lastKnownFileType = archive.asdictionary; name = AppleScriptKit.asdictionary; path = /System/Library/Frameworks/AppleScriptKit.framework/Versions/A/Resources/AppleScriptKit.asdictionary; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5544384314907674006CB58A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5544384D14907688006CB58A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EEC456D149075720024618F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EEC456E149075720024618F /* Cocoa.framework in Frameworks */,
+				9EEC456F149075720024618F /* AppleScriptKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EF22E161561B6B600943CB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EF22E2B1561B7A000943CB6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				DA206CF3015C4E8B03C91932 /* ECM GUI.applescript */,
+			);
+			name = Scripts;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EEC4575149075730024618F /* ECM GUI.app */,
+				5544384614907674006CB58A /* ecm */,
+				5544385014907688006CB58A /* unecm */,
+				9EF22E181561B6B600943CB6 /* ECM Cocoa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9EF22E231561B72B00943CB6 /* ECM Cocoa */,
+				080E96DDFE201D6D7F000001 /* Scripts */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				5544384814907674006CB58A /* ecm */,
+				5544385214907688006CB58A /* unecm */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				9EEC4574149075730024618F /* Info-ECM_GUI__Upgraded_.plist */,
+				9EF22E1A1561B6B600943CB6 /* ECM Cocoa-Info.plist */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14F23E4F052FC78D004A24BF /* ecm-icon.icns */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				DA206CF4015C4E8B03C91932 /* AppleScriptKit.asdictionary */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5544384814907674006CB58A /* ecm */ = {
+			isa = PBXGroup;
+			children = (
+				5544385814907701006CB58A /* ecm.c */,
+			);
+			path = ecm;
+			sourceTree = "<group>";
+		};
+		5544385214907688006CB58A /* unecm */ = {
+			isa = PBXGroup;
+			children = (
+				5544385A1490770C006CB58A /* unecm.c */,
+			);
+			path = unecm;
+			sourceTree = "<group>";
+		};
+		9EF22E231561B72B00943CB6 /* ECM Cocoa */ = {
+			isa = PBXGroup;
+			children = (
+				9EF22E241561B72B00943CB6 /* main.m */,
+				9EF22E251561B72B00943CB6 /* Resources */,
+				9EF22E371561B85600943CB6 /* ECMAppDelegate.h */,
+				9EF22E381561B85600943CB6 /* ECMAppDelegate.m */,
+			);
+			path = "ECM Cocoa";
+			sourceTree = "<group>";
+		};
+		9EF22E251561B72B00943CB6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9EF22E331561B80500943CB6 /* MainMenu.xib */,
+				9EDF0B501583F06900DB286C /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9EEC4562149075720024618F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5544384514907674006CB58A /* ecm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5544384914907674006CB58A /* Build configuration list for PBXNativeTarget "ecm" */;
+			buildPhases = (
+				5544384214907674006CB58A /* Sources */,
+				5544384314907674006CB58A /* Frameworks */,
+				5544384414907674006CB58A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ecm;
+			productName = ecm;
+			productReference = 5544384614907674006CB58A /* ecm */;
+			productType = "com.apple.product-type.tool";
+		};
+		5544384F14907688006CB58A /* unecm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5544385314907688006CB58A /* Build configuration list for PBXNativeTarget "unecm" */;
+			buildPhases = (
+				5544384C14907688006CB58A /* Sources */,
+				5544384D14907688006CB58A /* Frameworks */,
+				5544384E14907688006CB58A /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = unecm;
+			productName = unecm;
+			productReference = 5544385014907688006CB58A /* unecm */;
+			productType = "com.apple.product-type.tool";
+		};
+		9EEC4561149075720024618F /* ECM GUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EEC4570149075720024618F /* Build configuration list for PBXNativeTarget "ECM GUI" */;
+			buildPhases = (
+				9EEC4562149075720024618F /* Headers */,
+				9EEC4563149075720024618F /* AppleScript */,
+				9EEC4565149075720024618F /* Resources */,
+				9EEC456B149075720024618F /* Sources */,
+				9EEC456D149075720024618F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5544385F14907782006CB58A /* PBXTargetDependency */,
+				5544386114907782006CB58A /* PBXTargetDependency */,
+			);
+			name = "ECM GUI";
+			productInstallPath = "$(HOME)/Applications";
+			productName = Application;
+			productReference = 9EEC4575149075730024618F /* ECM GUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9EF22E171561B6B600943CB6 /* ECM Cocoa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EF22E1D1561B6B900943CB6 /* Build configuration list for PBXNativeTarget "ECM Cocoa" */;
+			buildPhases = (
+				9EF22E141561B6B600943CB6 /* Resources */,
+				9EF22E151561B6B600943CB6 /* Sources */,
+				9EF22E161561B6B600943CB6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9EF22E2A1561B78F00943CB6 /* PBXTargetDependency */,
+				9EF22E281561B78F00943CB6 /* PBXTargetDependency */,
+			);
+			name = "ECM Cocoa";
+			productName = "ECM Cocoa";
+			productReference = 9EF22E181561B6B600943CB6 /* ECM Cocoa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 9EEC4578149075790024618F /* Build configuration list for PBXProject "ECM GUI" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* Application */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9EEC4561149075720024618F /* ECM GUI */,
+				5544384514907674006CB58A /* ecm */,
+				5544384F14907688006CB58A /* unecm */,
+				9EF22E171561B6B600943CB6 /* ECM Cocoa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9EEC4565149075720024618F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5544385C1490777C006CB58A /* ecm in Resources */,
+				5544385D1490777C006CB58A /* unecm in Resources */,
+				9EEC4566149075720024618F /* MainMenu.nib in Resources */,
+				9EEC4567149075720024618F /* InfoPlist.strings in Resources */,
+				9EEC456A149075720024618F /* ecm-icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EF22E141561B6B600943CB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EF22E341561B80500943CB6 /* MainMenu.xib in Resources */,
+				9EDF0B511583F06900DB286C /* Localizable.strings in Resources */,
+				9EDF0B9E1583F73E00DB286C /* ecm in Resources */,
+				9EDF0B9F1583F74400DB286C /* unecm in Resources */,
+				9EDF0BA01583F75100DB286C /* ecm-icon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5544384214907674006CB58A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5544385914907701006CB58A /* ecm.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5544384C14907688006CB58A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5544385B1490770C006CB58A /* unecm.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EEC456B149075720024618F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EEC456C149075720024618F /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EF22E151561B6B600943CB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EF22E261561B72B00943CB6 /* main.m in Sources */,
+				9EF22E391561B85600943CB6 /* ECMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5544385F14907782006CB58A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5544384514907674006CB58A /* ecm */;
+			targetProxy = 5544385E14907782006CB58A /* PBXContainerItemProxy */;
+		};
+		5544386114907782006CB58A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5544384F14907688006CB58A /* unecm */;
+			targetProxy = 5544386014907782006CB58A /* PBXContainerItemProxy */;
+		};
+		9EF22E281561B78F00943CB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5544384F14907688006CB58A /* unecm */;
+			targetProxy = 9EF22E271561B78F00943CB6 /* PBXContainerItemProxy */;
+		};
+		9EF22E2A1561B78F00943CB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5544384514907674006CB58A /* ecm */;
+			targetProxy = 9EF22E291561B78F00943CB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		9EDF0B501583F06900DB286C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EDF0B4E1583F06200DB286C /* English */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5544384A14907674006CB58A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = 4.0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.4;
+				"SDKROOT[arch=ppc]" = macosx10.3.9;
+			};
+			name = Debug;
+		};
+		5544384B14907674006CB58A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = 4.0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.4;
+				"SDKROOT[arch=ppc]" = macosx10.3.9;
+			};
+			name = Release;
+		};
+		5544385414907688006CB58A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = 4.0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.4;
+				"SDKROOT[arch=ppc]" = macosx10.3.9;
+			};
+			name = Debug;
+		};
+		5544385514907688006CB58A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = 4.0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.4;
+				"SDKROOT[arch=ppc]" = macosx10.3.9;
+			};
+			name = Release;
+		};
+		9EEC4571149075720024618F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "Info-ECM_GUI__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = "ECM GUI";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9EEC4572149075720024618F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INFOPLIST_FILE = "Info-ECM_GUI__Upgraded_.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_OSAFLAGS = "-x";
+				PRODUCT_NAME = "ECM GUI";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9EEC4579149075790024618F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = 4.2;
+				"GCC_VERSION[arch=i386]" = 4.0;
+				"GCC_VERSION[arch=ppc]" = 4.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				"SDKROOT[arch=i386]" = macosx10.4;
+				"SDKROOT[arch=ppc]" = macosx10.3.9;
+			};
+			name = Debug;
+		};
+		9EEC457A149075790024618F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_VERSION = 4.2;
+				"GCC_VERSION[arch=i386]" = 4.0;
+				"GCC_VERSION[arch=ppc]" = 4.0;
+				PREBINDING = NO;
+				SDKROOT = macosx10.5;
+				"SDKROOT[arch=i386]" = macosx10.4;
+				"SDKROOT[arch=ppc]" = macosx10.3.9;
+			};
+			name = Release;
+		};
+		9EF22E1B1561B6B800943CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "ECM Cocoa-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.3;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "ECM Cocoa";
+				"SDKROOT[arch=ppc]" = macosx10.4;
+			};
+			name = Debug;
+		};
+		9EF22E1C1561B6B800943CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SYSTEM_LIBRARY_DIR)/Frameworks/Cocoa.framework/Headers/Cocoa.h";
+				INFOPLIST_FILE = "ECM Cocoa-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				MACOSX_DEPLOYMENT_TARGET = 10.5;
+				"MACOSX_DEPLOYMENT_TARGET[arch=i386]" = 10.4;
+				"MACOSX_DEPLOYMENT_TARGET[arch=ppc]" = 10.3;
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = "ECM Cocoa";
+				"SDKROOT[arch=ppc]" = macosx10.4;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5544384914907674006CB58A /* Build configuration list for PBXNativeTarget "ecm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5544384A14907674006CB58A /* Debug */,
+				5544384B14907674006CB58A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5544385314907688006CB58A /* Build configuration list for PBXNativeTarget "unecm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5544385414907688006CB58A /* Debug */,
+				5544385514907688006CB58A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EEC4570149075720024618F /* Build configuration list for PBXNativeTarget "ECM GUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EEC4571149075720024618F /* Debug */,
+				9EEC4572149075720024618F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EEC4578149075790024618F /* Build configuration list for PBXProject "ECM GUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EEC4579149075790024618F /* Debug */,
+				9EEC457A149075790024618F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EF22E1D1561B6B900943CB6 /* Build configuration list for PBXNativeTarget "ECM Cocoa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EF22E1B1561B6B800943CB6 /* Debug */,
+				9EF22E1C1561B6B800943CB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
