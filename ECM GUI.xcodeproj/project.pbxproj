@@ -24,6 +24,7 @@
 		5544385B1490770C006CB58A /* unecm.c in Sources */ = {isa = PBXBuildFile; fileRef = 5544385A1490770C006CB58A /* unecm.c */; };
 		5544385C1490777C006CB58A /* ecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544384614907674006CB58A /* ecm */; };
 		5544385D1490777C006CB58A /* unecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544385014907688006CB58A /* unecm */; };
+		9E5BBA3F15AA5A0E00E62C04 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E5BBA3E15AA5A0E00E62C04 /* MainMenu.xib */; };
 		9EDF0B511583F06900DB286C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF0B501583F06900DB286C /* Localizable.strings */; };
 		9EDF0B9E1583F73E00DB286C /* ecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544384614907674006CB58A /* ecm */; };
 		9EDF0B9F1583F74400DB286C /* unecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544385014907688006CB58A /* unecm */; };
@@ -37,7 +38,6 @@
 		9EEC456F149075720024618F /* AppleScriptKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */; };
 		9EF22E261561B72B00943CB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF22E241561B72B00943CB6 /* main.m */; };
 		9EF22E2B1561B7A000943CB6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		9EF22E341561B80500943CB6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EF22E331561B80500943CB6 /* MainMenu.xib */; };
 		9EF22E391561B85600943CB6 /* ECMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF22E381561B85600943CB6 /* ECMAppDelegate.m */; };
 /* End PBXBuildFile section */
 
@@ -111,7 +111,7 @@
 		9EF22E181561B6B600943CB6 /* ECM Cocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ECM Cocoa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF22E1A1561B6B600943CB6 /* ECM Cocoa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ECM Cocoa-Info.plist"; sourceTree = "<group>"; };
 		9EF22E241561B72B00943CB6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9EF22E331561B80500943CB6 /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		9EF22E331561B80500943CB6 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9EF22E371561B85600943CB6 /* ECMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMAppDelegate.h; sourceTree = "<group>"; };
 		9EF22E381561B85600943CB6 /* ECMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMAppDelegate.m; sourceTree = "<group>"; };
 		DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
@@ -266,7 +266,7 @@
 		9EF22E251561B72B00943CB6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9EF22E331561B80500943CB6 /* MainMenu.xib */,
+				9E5BBA3E15AA5A0E00E62C04 /* MainMenu.xib */,
 				9EDF0B501583F06900DB286C /* Localizable.strings */,
 			);
 			path = Resources;
@@ -403,7 +403,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EF22E341561B80500943CB6 /* MainMenu.xib in Resources */,
+				9E5BBA3F15AA5A0E00E62C04 /* MainMenu.xib in Resources */,
 				9EDF0B511583F06900DB286C /* Localizable.strings in Resources */,
 				9EDF0B9E1583F73E00DB286C /* ecm in Resources */,
 				9EDF0B9F1583F74400DB286C /* unecm in Resources */,
@@ -487,6 +487,14 @@
 				29B97319FDCFA39411CA2CEA /* English */,
 			);
 			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+		9E5BBA3E15AA5A0E00E62C04 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EF22E331561B80500943CB6 /* English */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		9EDF0B501583F06900DB286C /* Localizable.strings */ = {
