@@ -49,7 +49,11 @@
 	[theTask setArguments:[NSArray arrayWithObject:[fileURL path]]];
 	[statusText setTitleWithMnemonic:NSLocalizedString(@"Processing file", @"")];
 	[theTask launch];
+	[fileSelect setEnabled:NO];
+	[beginButton setEnabled:NO];
 	[theTask waitUntilExit];
+	[fileSelect setEnabled:YES];
+	[beginButton setEnabled:YES];
 	[statusText setTitleWithMnemonic:NSLocalizedString(@"Ready", @"")];
 	[theTask release];
 }

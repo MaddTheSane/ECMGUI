@@ -13,6 +13,8 @@
 	IBOutlet NSTextField *statusText;
 	IBOutlet NSTextField *fileField;
 	IBOutlet NSMatrix *conversionType;
+	IBOutlet NSButton *fileSelect;
+	IBOutlet NSButton *beginButton;
 	NSURL *fileURL;
 }
 - (IBAction)selectFile:(id)sender;
