@@ -24,6 +24,8 @@
 		5544385B1490770C006CB58A /* unecm.c in Sources */ = {isa = PBXBuildFile; fileRef = 5544385A1490770C006CB58A /* unecm.c */; };
 		5544385C1490777C006CB58A /* ecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544384614907674006CB58A /* ecm */; };
 		5544385D1490777C006CB58A /* unecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544385014907688006CB58A /* unecm */; };
+		55B2A349189F0D8C00B429F5 /* ECMEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B2A348189F0D8C00B429F5 /* ECMEncoder.m */; };
+		55B2A34C189F0DAA00B429F5 /* ECMDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B2A34B189F0DAA00B429F5 /* ECMDecoder.m */; };
 		9E5BBA3F15AA5A0E00E62C04 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E5BBA3E15AA5A0E00E62C04 /* MainMenu.xib */; };
 		9EDF0B511583F06900DB286C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF0B501583F06900DB286C /* Localizable.strings */; };
 		9EDF0B9E1583F73E00DB286C /* ecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544384614907674006CB58A /* ecm */; };
@@ -105,6 +107,11 @@
 		5544385014907688006CB58A /* unecm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = unecm; sourceTree = BUILT_PRODUCTS_DIR; };
 		5544385814907701006CB58A /* ecm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ecm.c; sourceTree = "<group>"; };
 		5544385A1490770C006CB58A /* unecm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unecm.c; sourceTree = "<group>"; };
+		55B2A347189F0D8C00B429F5 /* ECMEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMEncoder.h; sourceTree = "<group>"; };
+		55B2A348189F0D8C00B429F5 /* ECMEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMEncoder.m; sourceTree = "<group>"; };
+		55B2A34A189F0DAA00B429F5 /* ECMDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMDecoder.h; sourceTree = "<group>"; };
+		55B2A34B189F0DAA00B429F5 /* ECMDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMDecoder.m; sourceTree = "<group>"; };
+		55B2A34D189F0E3300B429F5 /* ECMClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ECMClass.h; sourceTree = "<group>"; };
 		9EDF0B4E1583F06200DB286C /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9EEC4574149075730024618F /* Info-ECM_GUI__Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-ECM_GUI__Upgraded_.plist"; sourceTree = "<group>"; };
 		9EEC4575149075730024618F /* ECM GUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ECM GUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +263,11 @@
 				9EF22E241561B72B00943CB6 /* main.m */,
 				9EF22E371561B85600943CB6 /* ECMAppDelegate.h */,
 				9EF22E381561B85600943CB6 /* ECMAppDelegate.m */,
+				55B2A34D189F0E3300B429F5 /* ECMClass.h */,
+				55B2A347189F0D8C00B429F5 /* ECMEncoder.h */,
+				55B2A348189F0D8C00B429F5 /* ECMEncoder.m */,
+				55B2A34A189F0DAA00B429F5 /* ECMDecoder.h */,
+				55B2A34B189F0DAA00B429F5 /* ECMDecoder.m */,
 				9EF22E251561B72B00943CB6 /* Resources */,
 			);
 			path = "ECM Cocoa";
@@ -442,6 +454,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EF22E261561B72B00943CB6 /* main.m in Sources */,
+				55B2A349189F0D8C00B429F5 /* ECMEncoder.m in Sources */,
+				55B2A34C189F0DAA00B429F5 /* ECMDecoder.m in Sources */,
 				9EF22E391561B85600943CB6 /* ECMAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

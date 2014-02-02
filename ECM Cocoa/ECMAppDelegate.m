@@ -7,6 +7,8 @@
 //
 
 #import "ECMAppDelegate.h"
+#import "ECMEncoder.h"
+#import "ECMDecoder.h"
 
 @implementation ECMAppDelegate
 @synthesize fileSelect;
@@ -48,6 +50,11 @@
 	[fileSelect setEnabled:YES];
 	[beginButton setEnabled:YES];
 	[statusText setTitleWithMnemonic:NSLocalizedString(@"Ready", @"")];
+}
+
+- (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename
+{
+	
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
