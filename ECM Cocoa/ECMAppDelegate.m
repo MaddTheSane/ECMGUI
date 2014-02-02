@@ -8,8 +8,12 @@
 
 #import "ECMAppDelegate.h"
 
-
 @implementation ECMAppDelegate
+@synthesize fileSelect;
+@synthesize statusText;
+@synthesize fileField;
+@synthesize conversionType;
+@synthesize beginButton;
 
 - (IBAction)selectFile:(id)sender
 {
@@ -18,8 +22,8 @@
 	[op setCanChooseDirectories:NO];
 	[op setAllowsMultipleSelection:NO];
 	if ([op runModal] == NSOKButton) {
-		fileURL = [op URLs][0];
-		[fileField setTitleWithMnemonic:[fileURL path]];
+		self.fileURL = [op URLs][0];
+		[fileField setStringValue:[self.fileURL path]];
 	}
 }
 		
@@ -35,7 +39,7 @@
 	NSString *helperPath = [[appBundle resourcePath] stringByAppendingPathComponent:toolName];
 	NSTask *theTask = [[NSTask alloc] init];
 	[theTask setLaunchPath:helperPath];
-	[theTask setArguments:@[[fileURL path]]];
+	[theTask setArguments:@[[self.fileURL path]]];
 	[statusText setTitleWithMnemonic:NSLocalizedString(@"Processing file", @"")];
 	[theTask launch];
 	[fileSelect setEnabled:NO];

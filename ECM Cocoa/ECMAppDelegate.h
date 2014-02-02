@@ -9,14 +9,14 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface ECMAppDelegate : NSObject {
-	IBOutlet NSTextField *statusText;
-	IBOutlet NSTextField *fileField;
-	IBOutlet NSMatrix *conversionType;
-	IBOutlet NSButton *fileSelect;
-	IBOutlet NSButton *beginButton;
-	NSURL *fileURL;
-}
+@interface ECMAppDelegate : NSObject <NSApplicationDelegate>
+@property (weak) IBOutlet NSTextField *statusText;
+@property (weak) IBOutlet NSTextField *fileField;
+@property (weak) IBOutlet NSMatrix *conversionType;
+@property (weak) IBOutlet NSButton *fileSelect;
+@property (weak) IBOutlet NSButton *beginButton;
+@property (strong) NSURL *fileURL;
+
 - (IBAction)selectFile:(id)sender;
 - (IBAction)beginConversion:(id)sender;
 
