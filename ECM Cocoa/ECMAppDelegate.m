@@ -13,25 +13,14 @@
 
 - (IBAction)selectFile:(id)sender
 {
-	NSOpenPanel *op = [[NSOpenPanel openPanel] retain];
+	NSOpenPanel *op = [NSOpenPanel openPanel];
 	[op setCanChooseFiles:YES];
 	[op setCanChooseDirectories:NO];
 	[op setAllowsMultipleSelection:NO];
-	if ([op runModal] == NSOKButton)
-	{
-		if(fileURL != nil)
-			[fileURL release];
-		fileURL = [[[op URLs] objectAtIndex:0] retain];
-		[fileField setTitleWithMnemonic:[fileURL path]]; 
+	if ([op runModal] == NSOKButton) {
+		fileURL = [op URLs][0];
+		[fileField setTitleWithMnemonic:[fileURL path]];
 	}
-	
-	[op release];
-}
-
-- (void)dealloc
-{
-	[fileURL release];
-	[super dealloc];
 }
 		
 - (IBAction)beginConversion:(id)sender
@@ -46,7 +35,7 @@
 	NSString *helperPath = [[appBundle resourcePath] stringByAppendingPathComponent:toolName];
 	NSTask *theTask = [[NSTask alloc] init];
 	[theTask setLaunchPath:helperPath];
-	[theTask setArguments:[NSArray arrayWithObject:[fileURL path]]];
+	[theTask setArguments:@[[fileURL path]]];
 	[statusText setTitleWithMnemonic:NSLocalizedString(@"Processing file", @"")];
 	[theTask launch];
 	[fileSelect setEnabled:NO];
@@ -55,7 +44,6 @@
 	[fileSelect setEnabled:YES];
 	[beginButton setEnabled:YES];
 	[statusText setTitleWithMnemonic:NSLocalizedString(@"Ready", @"")];
-	[theTask release];
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender
