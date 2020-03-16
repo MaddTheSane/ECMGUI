@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "ECMClass.h"
 
-@interface ECMEncoder : NSObject <ECMClass>
+@interface ECMEncoder : NSOperation <ECMClass>
+- (instancetype)initWithSourceURL:(NSURL *)srcURL;
+- (instancetype)initWithSourceURL:(NSURL *)srcURL destinationURL:(NSURL*)destURL;
 
 @end

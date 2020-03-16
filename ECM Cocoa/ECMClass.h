@@ -11,5 +11,7 @@
 @protocol ECMClass <NSObject>
 - (instancetype)initWithSourceURL:(NSURL *)srcURL;
 - (instancetype)initWithSourceURL:(NSURL *)srcURL destinationURL:(NSURL*)destURL;
-- (void)run;
+- (void)main;
+@property (readonly, strong) NSURL *sourceURL;
+@property (readonly, strong) NSURL *destinationURL;
 @end

@@ -1,7 +1,7 @@
 #import <mach-o/dyld.h>
 
 extern int NSApplicationMain(int argc, const char *argv[]);
-extern void ASKInitialize();
+extern void ASKInitialize(void);
 
 int main(int argc, const char *argv[])
 {
