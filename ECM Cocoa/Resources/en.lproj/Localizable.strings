@@ -1,0 +1,10 @@
+/* 
+   Localizable.strings
+   ECM GUI
+
+   Created by C.W. Betts on 6/9/12.
+   Copyright 2012 __MyCompanyName__. All rights reserved.
+ */
+
+"Processing file" = "Processing file";
+"Ready" = "Ready";
