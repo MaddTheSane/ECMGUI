@@ -24,12 +24,12 @@
 		5544385B1490770C006CB58A /* unecm.c in Sources */ = {isa = PBXBuildFile; fileRef = 5544385A1490770C006CB58A /* unecm.c */; };
 		5544385C1490777C006CB58A /* ecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544384614907674006CB58A /* ecm */; };
 		5544385D1490777C006CB58A /* unecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544385014907688006CB58A /* unecm */; };
+		55501C7B258B649200CF6BE9 /* ecm in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5544384614907674006CB58A /* ecm */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		55501C7C258B649200CF6BE9 /* unecm in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5544385014907688006CB58A /* unecm */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		55B2A349189F0D8C00B429F5 /* ECMEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B2A348189F0D8C00B429F5 /* ECMEncoder.m */; };
 		55B2A34C189F0DAA00B429F5 /* ECMDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B2A34B189F0DAA00B429F5 /* ECMDecoder.m */; };
 		9E5BBA3F15AA5A0E00E62C04 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E5BBA3E15AA5A0E00E62C04 /* MainMenu.xib */; };
 		9EDF0B511583F06900DB286C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF0B501583F06900DB286C /* Localizable.strings */; };
-		9EDF0B9E1583F73E00DB286C /* ecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544384614907674006CB58A /* ecm */; };
-		9EDF0B9F1583F74400DB286C /* unecm in Resources */ = {isa = PBXBuildFile; fileRef = 5544385014907688006CB58A /* unecm */; };
 		9EDF0BA01583F75100DB286C /* ecm-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 14F23E4F052FC78D004A24BF /* ecm-icon.icns */; };
 		9EEC4564149075720024618F /* ECM GUI.applescript in AppleScript */ = {isa = PBXBuildFile; fileRef = DA206CF3015C4E8B03C91932 /* ECM GUI.applescript */; settings = {ATTRIBUTES = (Debug, ); }; };
 		9EEC4566149075720024618F /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
@@ -92,6 +92,17 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		55501C76258B647900CF6BE9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				55501C7B258B649200CF6BE9 /* ecm in CopyFiles */,
+				55501C7C258B649200CF6BE9 /* unecm in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -358,6 +369,7 @@
 				9EF22E141561B6B600943CB6 /* Resources */,
 				9EF22E151561B6B600943CB6 /* Sources */,
 				9EF22E161561B6B600943CB6 /* Frameworks */,
+				55501C76258B647900CF6BE9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -416,8 +428,6 @@
 			files = (
 				9E5BBA3F15AA5A0E00E62C04 /* MainMenu.xib in Resources */,
 				9EDF0B511583F06900DB286C /* Localizable.strings in Resources */,
-				9EDF0B9E1583F73E00DB286C /* ecm in Resources */,
-				9EDF0B9F1583F74400DB286C /* unecm in Resources */,
 				9EDF0BA01583F75100DB286C /* ecm-icon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,7 +650,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -677,7 +687,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				SDKROOT = macosx;
 			};
 			name = Release;

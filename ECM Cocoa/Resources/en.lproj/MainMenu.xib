@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14113" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14113"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -518,19 +518,20 @@
                     </menu>
                 </menuItem>
             </items>
+            <point key="canvasLocation" x="14" y="135"/>
         </menu>
-        <window title="ECM Cocoa" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" animationBehavior="default" id="367">
+        <window title="ECM Cocoa" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" animationBehavior="default" id="367">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <rect key="contentRect" x="196" y="347" width="323" height="144"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1057"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
             <value key="minSize" type="size" width="323" height="144"/>
             <value key="maxSize" type="size" width="323" height="144"/>
             <view key="contentView" id="368">
-                <rect key="frame" x="0.0" y="0.0" width="323" height="144"/>
+                <rect key="frame" x="0.0" y="0.0" width="323" height="145"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="449">
-                        <rect key="frame" x="18" y="107" width="287" height="17"/>
+                        <rect key="frame" x="18" y="109" width="287" height="16"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" usesSingleLineMode="YES" id="462">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -538,7 +539,7 @@
                         </textFieldCell>
                     </textField>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="450">
-                        <rect key="frame" x="206" y="71" width="103" height="32"/>
+                        <rect key="frame" x="213" y="74" width="97" height="32"/>
                         <buttonCell key="cell" type="push" title="Select File" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="461">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -548,7 +549,7 @@
                         </connections>
                     </button>
                     <matrix verticalHuggingPriority="750" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="451">
-                        <rect key="frame" x="20" y="61" width="74" height="38"/>
+                        <rect key="frame" x="20" y="63" width="74" height="38"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         <size key="cellSize" width="74" height="18"/>
                         <size key="intercellSpacing" width="4" height="2"/>
@@ -570,14 +571,14 @@
                         </cells>
                     </matrix>
                     <button translatesAutoresizingMaskIntoConstraints="NO" id="452">
-                        <rect key="frame" x="18" y="37" width="124" height="18"/>
+                        <rect key="frame" x="18" y="38" width="128" height="18"/>
                         <buttonCell key="cell" type="check" title="Send to Terminal" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" inset="2" id="457">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                     </button>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="453">
-                        <rect key="frame" x="234" y="38" width="75" height="32"/>
+                        <rect key="frame" x="241" y="42" width="69" height="32"/>
                         <buttonCell key="cell" type="push" title="Begin" bezelStyle="rounded" alignment="center" borderStyle="border" inset="2" id="456">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -588,9 +589,12 @@
                     </button>
                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="454">
                         <rect key="frame" x="18" y="5" width="287" height="14"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="283" id="XPX-3P-cxF"/>
+                        </constraints>
                         <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" alignment="left" title="Ready" id="455">
                             <font key="font" metaFont="smallSystem"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
@@ -615,6 +619,7 @@
                     <constraint firstItem="450" firstAttribute="top" secondItem="449" secondAttribute="bottom" constant="8" symbolic="YES" id="shU-eb-kV8"/>
                 </constraints>
             </view>
+            <point key="canvasLocation" x="14" y="-34"/>
         </window>
         <customObject id="463" customClass="ECMAppDelegate">
             <connections>
