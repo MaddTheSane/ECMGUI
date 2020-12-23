@@ -42,19 +42,19 @@
 	NSTask *theTask = [[NSTask alloc] init];
 	[theTask setLaunchPath:helperPath];
 	[theTask setArguments:@[[self.fileURL path]]];
-	[statusText setTitleWithMnemonic:NSLocalizedString(@"Processing file", @"")];
+	[statusText setStringValue:NSLocalizedString(@"Processing file", @"")];
 	[theTask launch];
 	[fileSelect setEnabled:NO];
 	[beginButton setEnabled:NO];
 	[theTask waitUntilExit];
 	[fileSelect setEnabled:YES];
 	[beginButton setEnabled:YES];
-	[statusText setTitleWithMnemonic:NSLocalizedString(@"Ready", @"")];
+	[statusText setStringValue:NSLocalizedString(@"Ready", @"")];
 }
 
 - (BOOL)application:(NSApplication *)sender openFile:(NSString *)filename
 {
-	
+	return NO;
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender

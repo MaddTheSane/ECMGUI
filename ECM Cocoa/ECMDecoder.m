@@ -26,6 +26,7 @@
 {
 	if (self = [super init]) {
 		_sourceURL = srcURL;
+		_destinationURL = destURL;
 		uint32_t i, j, edc;
 		for(i = 0; i < 256; i++) {
 			j = (i << 1) ^ (i & 0x80 ? 0x11D : 0);
@@ -101,9 +102,11 @@ static void ecc_computeblock(ECMDecoder *self,
 {
 	uint8_t address[4], i;
 	/* Save the address and zero it out */
-	if(zeroaddress) for(i = 0; i < 4; i++) {
-		address[i] = sector[12 + i];
-		sector[12 + i] = 0;
+	if(zeroaddress) {
+		for(i = 0; i < 4; i++) {
+			address[i] = sector[12 + i];
+			sector[12 + i] = 0;
+		}
 	}
 	/* Compute ECC P code */
 	ecc_computeblock(self, sector + 0xC, 86, 24,  2, 86, sector + 0x81C);
