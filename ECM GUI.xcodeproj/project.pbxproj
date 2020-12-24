@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		552CA1C525947E0E000C6942 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 552CA1C425947E0E000C6942 /* Media.xcassets */; };
 		5544385914907701006CB58A /* ecm.c in Sources */ = {isa = PBXBuildFile; fileRef = 5544385814907701006CB58A /* ecm.c */; };
 		5544385B1490770C006CB58A /* unecm.c in Sources */ = {isa = PBXBuildFile; fileRef = 5544385A1490770C006CB58A /* unecm.c */; };
 		55501C7B258B649200CF6BE9 /* ecm in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5544384614907674006CB58A /* ecm */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
@@ -15,7 +16,6 @@
 		55B2A34C189F0DAA00B429F5 /* ECMDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 55B2A34B189F0DAA00B429F5 /* ECMDecoder.m */; };
 		9E5BBA3F15AA5A0E00E62C04 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E5BBA3E15AA5A0E00E62C04 /* MainMenu.xib */; };
 		9EDF0B511583F06900DB286C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9EDF0B501583F06900DB286C /* Localizable.strings */; };
-		9EDF0BA01583F75100DB286C /* ecm-icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 14F23E4F052FC78D004A24BF /* ecm-icon.icns */; };
 		9EF22E261561B72B00943CB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF22E241561B72B00943CB6 /* main.m */; };
 		9EF22E2B1561B7A000943CB6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		9EF22E391561B85600943CB6 /* ECMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9EF22E381561B85600943CB6 /* ECMAppDelegate.m */; };
@@ -72,9 +72,9 @@
 
 /* Begin PBXFileReference section */
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
-		14F23E4F052FC78D004A24BF /* ecm-icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = "ecm-icon.icns"; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		552CA1C425947E0E000C6942 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		5544384614907674006CB58A /* ecm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ecm; sourceTree = BUILT_PRODUCTS_DIR; };
 		5544385014907688006CB58A /* unecm */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = unecm; sourceTree = BUILT_PRODUCTS_DIR; };
 		5544385814907701006CB58A /* ecm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ecm.c; sourceTree = "<group>"; };
@@ -86,13 +86,11 @@
 		55B2A34A189F0DAA00B429F5 /* ECMDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMDecoder.h; sourceTree = "<group>"; };
 		55B2A34B189F0DAA00B429F5 /* ECMDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMDecoder.m; sourceTree = "<group>"; };
 		55B2A34D189F0E3300B429F5 /* ECMClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMClass.h; sourceTree = "<group>"; };
-		9EEC4574149075730024618F /* Info-ECM_GUI__Upgraded_.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-ECM_GUI__Upgraded_.plist"; sourceTree = "<group>"; };
 		9EF22E181561B6B600943CB6 /* ECM Cocoa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ECM Cocoa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EF22E1A1561B6B600943CB6 /* ECM Cocoa-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ECM Cocoa-Info.plist"; sourceTree = "<group>"; };
 		9EF22E241561B72B00943CB6 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9EF22E371561B85600943CB6 /* ECMAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECMAppDelegate.h; sourceTree = "<group>"; };
 		9EF22E381561B85600943CB6 /* ECMAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ECMAppDelegate.m; sourceTree = "<group>"; };
-		DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppleScriptKit.framework; path = /System/Library/Frameworks/AppleScriptKit.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
-				DA206CF1015C4E2903C91932 /* AppleScriptKit.framework */,
 			);
 			name = "Linked Frameworks";
 			sourceTree = "<group>";
@@ -157,8 +154,6 @@
 				5544385214907688006CB58A /* unecm */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				9EEC4574149075730024618F /* Info-ECM_GUI__Upgraded_.plist */,
-				9EF22E1A1561B6B600943CB6 /* ECM Cocoa-Info.plist */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -207,9 +202,10 @@
 		9EF22E251561B72B00943CB6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				14F23E4F052FC78D004A24BF /* ecm-icon.icns */,
+				9EF22E1A1561B6B600943CB6 /* ECM Cocoa-Info.plist */,
 				9E5BBA3E15AA5A0E00E62C04 /* MainMenu.xib */,
 				9EDF0B501583F06900DB286C /* Localizable.strings */,
+				552CA1C425947E0E000C6942 /* Media.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -290,9 +286,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				9EF22E171561B6B600943CB6 /* ECM Cocoa */,
 				5544384514907674006CB58A /* ecm */,
 				5544384F14907688006CB58A /* unecm */,
-				9EF22E171561B6B600943CB6 /* ECM Cocoa */,
 			);
 		};
 /* End PBXProject section */
@@ -304,7 +300,7 @@
 			files = (
 				9E5BBA3F15AA5A0E00E62C04 /* MainMenu.xib in Resources */,
 				9EDF0B511583F06900DB286C /* Localizable.strings in Resources */,
-				9EDF0BA01583F75100DB286C /* ecm-icon.icns in Resources */,
+				552CA1C525947E0E000C6942 /* Media.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,10 +506,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "ecm-icon";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "-";
 				GCC_DYNAMIC_NO_PIC = NO;
-				INFOPLIST_FILE = "ECM Cocoa-Info.plist";
+				INFOPLIST_FILE = "ECM Cocoa/Resources/ECM Cocoa-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.maddthesane.ECMGUI.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "ECM Cocoa";
@@ -524,9 +521,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "ecm-icon";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "-";
-				INFOPLIST_FILE = "ECM Cocoa-Info.plist";
+				INFOPLIST_FILE = "ECM Cocoa/Resources/ECM Cocoa-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.maddthesane.ECMGUI.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "ECM Cocoa";
