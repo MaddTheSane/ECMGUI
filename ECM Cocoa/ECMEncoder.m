@@ -123,9 +123,7 @@ const uint32_t edc_lut[256] = {0, 2425422081, 2434859521, 28312320,
 /**
  * Compute EDC for a block
  */
--(uint32_t)computeEDCBlock:(uint32_t)edc
-				withSource:(const uint8_t*) src
-					  size:(uint16_t) size
+static inline uint32_t edc_computeblock(uint32_t edc, const uint8_t *src, uint16_t size)
 {
 	while (size--) {
 		edc = (edc >> 8) ^ edc_lut[(edc ^ (*src++)) & 0xFF];
@@ -255,7 +253,7 @@ const uint32_t edc_lut[256] = {0, 2425422081, 2434859521, 28312320,
 	}
 	
 	/* Check EDC */
-	myedc = [self computeEDCBlock:0 withSource:sector size:0x808];
+	myedc = edc_computeblock(0, sector, 0x808);
 	if (canbetype2) {
 		if ((sector[0x808] != ((myedc >>  0) & 0xFF)) ||
 			(sector[0x809] != ((myedc >>  8) & 0xFF)) ||
@@ -264,7 +262,7 @@ const uint32_t edc_lut[256] = {0, 2425422081, 2434859521, 28312320,
 			canbetype2 = NO;
 		}
 	}
-	myedc = [self computeEDCBlock:myedc withSource:sector +0x808 size:8];
+	myedc = edc_computeblock(myedc, sector +0x808, 8);
 	if (canbetype1) {
 		if ((sector[0x810] != ((myedc >>  0) & 0xFF)) ||
 			(sector[0x811] != ((myedc >>  8) & 0xFF)) ||
@@ -273,7 +271,7 @@ const uint32_t edc_lut[256] = {0, 2425422081, 2434859521, 28312320,
 			canbetype1 = NO;
 		}
 	}
-	myedc = [self computeEDCBlock:myedc withSource:sector + 0x810 size:0x10C];
+	myedc = edc_computeblock(myedc, sector + 0x810, 0x10C);
 	if (canbetype3) {
 		if ((sector[0x91C] != ((myedc >>  0) & 0xFF)) ||
 			(sector[0x91D] != ((myedc >>  8) & 0xFF)) ||
@@ -338,7 +336,7 @@ static void write_type_count(FILE *fout, unsigned type, unsigned count)
 				b = 2352;
 			}
 			fread(buf, 1, b, fin);
-			edc = [self computeEDCBlock:edc withSource:buf size:b];
+			edc = edc_computeblock(edc, buf, b);
 			fwrite(buf, 1, b, fout);
 			count -= b;
 			setcounter_encode(ftell(fin));
@@ -349,20 +347,20 @@ static void write_type_count(FILE *fout, unsigned type, unsigned count)
 		switch(type) {
 			case 1:
 				fread(buf, 1, 2352, fin);
-				edc = [self computeEDCBlock:edc withSource:buf size:2352];
+				edc = edc_computeblock(edc, buf, 2352);
 				fwrite(buf + 0x00C, 1, 0x003, fout);
 				fwrite(buf + 0x010, 1, 0x800, fout);
 				setcounter_encode(ftell(fin));
 				break;
 			case 2:
 				fread(buf, 1, 2336, fin);
-				edc = [self computeEDCBlock:edc withSource:buf size:2336];
+				edc = edc_computeblock(edc, buf, 2336);
 				fwrite(buf + 0x004, 1, 0x804, fout);
 				setcounter_encode(ftell(fin));
 				break;
 			case 3:
 				fread(buf, 1, 2336, fin);
-				edc = [self computeEDCBlock:edc withSource:buf size:2336];
+				edc = edc_computeblock(edc, buf, 2336);
 				fwrite(buf + 0x004, 1, 0x918, fout);
 				setcounter_encode(ftell(fin));
 				break;

@@ -26,11 +26,9 @@
 	return self;
 }
 
-static uint32_t edc_partial_computeblock(uint32_t  edc,
-										 const uint8_t  *src,
-										 uint16_t  size)
+static inline uint32_t edc_partial_computeblock(uint32_t edc, const uint8_t *src, uint16_t size)
 {
-	while(size--) {
+	while (size--) {
 		edc = (edc >> 8) ^ edc_lut[(edc ^ (*src++)) & 0xFF];
 	}
 	return edc;
@@ -39,9 +37,7 @@ static uint32_t edc_partial_computeblock(uint32_t  edc,
 /**
  * Compute EDC for a block
  */
--(void) computeEDCBlockWithSource:(const uint8_t*) src
-							 size:(uint16_t) size
-					  destination:(uint8_t*) dest
+static void edc_computeblock(const uint8_t *src, uint16_t size, uint8_t *dest)
 {
 	uint32_t edc = edc_partial_computeblock(0, src, size);
 	dest[0] = (edc >>  0) & 0xFF;
@@ -61,12 +57,11 @@ static void ecc_computeblock(uint8_t *src,
 							 uint8_t *dest)
 {
 	uint32_t size = major_count * minor_count;
-	uint32_t major, minor;
-	for (major = 0; major < major_count; major++) {
+	for (uint32_t major = 0; major < major_count; major++) {
 		uint32_t index = (major >> 1) * major_mult + (major & 1);
 		uint8_t ecc_a = 0;
 		uint8_t ecc_b = 0;
-		for (minor = 0; minor < minor_count; minor++) {
+		for (uint32_t minor = 0; minor < minor_count; minor++) {
 			uint8_t temp = src[index];
 			index += minor_inc;
 			if(index >= size) {
@@ -86,7 +81,7 @@ static void ecc_computeblock(uint8_t *src,
  * Generate ECC P and Q codes for a block
  */
 -(void) generateECCWithSector:(uint8_t *)sector
-				  zeroAddress:(int)zeroaddress
+				  zeroAddress:(BOOL)zeroaddress
 {
 	uint8_t address[4];
 	/* Save the address and zero it out */
@@ -117,23 +112,23 @@ static void ecc_computeblock(uint8_t *src,
 	switch(type) {
 		case 1: /* Mode 1 */
 			/* Compute EDC */
-			[self computeEDCBlockWithSource:sector + 0x00 size:0x810 destination:sector + 0x810];
+			edc_computeblock(sector + 0x00, 0x810, sector + 0x810);
 			/* Write out zero bytes */
 			for (int i = 0; i < 8; i++) {
 				sector[0x814 + i] = 0;
 			}
 			/* Generate ECC P/Q codes */
-			[self generateECCWithSector:sector zeroAddress:0];
+			[self generateECCWithSector:sector zeroAddress:NO];
 			break;
 		case 2: /* Mode 2 form 1 */
 			/* Compute EDC */
-			[self computeEDCBlockWithSource:sector + 0x10 size:0x808 destination:sector + 0x818];
+			edc_computeblock(sector + 0x10, 0x808, sector + 0x818);
 			/* Generate ECC P/Q codes */
-			[self generateECCWithSector:sector zeroAddress:1];
+			[self generateECCWithSector:sector zeroAddress:YES];
 			break;
 		case 3: /* Mode 2 form 2 */
 			/* Compute EDC */
-			[self computeEDCBlockWithSource:sector + 0x10 size:0x91C destination:sector + 0x92C];
+			edc_computeblock(sector + 0x10, 0x91C, sector + 0x92C);
 			break;
 	}
 }
@@ -142,14 +137,14 @@ static void ecc_computeblock(uint8_t *src,
 
 - (void)main
 {
-	FILE *in = fopen(_sourceURL.fileSystemRepresentation, "rb");
-	FILE *out = fopen(_destinationURL.fileSystemRepresentation, "wb");
-	if (in == NULL || out == NULL) {
-		if (in) {
-			fclose(in);
+	FILE *fin = fopen(_sourceURL.fileSystemRepresentation, "rb");
+	FILE *fout = fopen(_destinationURL.fileSystemRepresentation, "wb");
+	if (fin == NULL || fout == NULL) {
+		if (fin) {
+			fclose(fin);
 		}
-		if (out) {
-			fclose(out);
+		if (fout) {
+			fclose(fout);
 		}
 		return;
 	}
@@ -158,72 +153,74 @@ static void ecc_computeblock(uint8_t *src,
 	unsigned char sector[2352];
 	unsigned type;
 	unsigned num;
-	fseek(in, 0, SEEK_END);
-	_progress = [NSProgress discreteProgressWithTotalUnitCount:ftell(in)];
-	fseek(in, 0, SEEK_SET);
-	if((fgetc(in) != 'E') ||
-	   (fgetc(in) != 'C') ||
-	   (fgetc(in) != 'M') ||
-	   (fgetc(in) != 0x00)) {
+	fseek(fin, 0, SEEK_END);
+	_progress = [NSProgress discreteProgressWithTotalUnitCount:ftell(fin)];
+	fseek(fin, 0, SEEK_SET);
+	if((fgetc(fin) != 'E') ||
+	   (fgetc(fin) != 'C') ||
+	   (fgetc(fin) != 'M') ||
+	   (fgetc(fin) != 0x00)) {
 		fprintf(stderr, "Header not found!\n");
 		goto corrupt;
 	}
 	for(;;) {
-		int c = fgetc(in);
+		int c = fgetc(fin);
 		int bits = 5;
-		if(c == EOF) goto uneof;
+		if (c == EOF) {
+			goto uneof;
+		}
 		type = c & 3;
 		num = (c >> 2) & 0x1F;
-		while(c & 0x80) {
-			c = fgetc(in);
+		while (c & 0x80) {
+			c = fgetc(fin);
 			if(c == EOF) {
 				goto uneof;
 			}
 			num |= ((unsigned)(c & 0x7F)) << bits;
 			bits += 7;
 		}
-		if(num == 0xFFFFFFFF) {
+		if (num == 0xFFFFFFFF) {
 			break;
 		}
 		num++;
 		if(num >= 0x80000000) {
 			goto corrupt;
 		}
-		if(!type) {
-			while(num) {
+		if (!type) {
+			while (num) {
 				int b = num;
 				if(b > 2352) {
 					b = 2352;
 				}
-				if(fread(sector, 1, b, in) != b) {
+				if (fread(sector, 1, b, fin) != b) {
 					goto uneof;
 				}
 				checkedc = edc_partial_computeblock(checkedc, sector, b);
-				fwrite(sector, 1, b, out);
+				fwrite(sector, 1, b, fout);
 				num -= b;
-				setcounter(ftell(in));
+				setcounter(ftell(fin));
 			}
 		} else {
-			while(num--) {
+			while (num--) {
 				memset(sector, 0, sizeof(sector));
 				memset(sector + 1, 0xFF, 10);
-				switch(type) {
+				switch (type) {
 					case 1:
 						sector[0x0F] = 0x01;
-						if (fread(sector + 0x00C, 1, 0x003, in) != 0x003) {
+						if (fread(sector + 0x00C, 1, 0x003, fin) != 0x003) {
 							goto uneof;
 						}
-						if (fread(sector + 0x010, 1, 0x800, in) != 0x800) {
+						if (fread(sector + 0x010, 1, 0x800, fin) != 0x800) {
 							goto uneof;
 						}
 						[self generateECCEDCWithSector:sector type:1];
 						checkedc = edc_partial_computeblock(checkedc, sector, 2352);
-						fwrite(sector, 2352, 1, out);
-						setcounter(ftell(in));
+						fwrite(sector, 2352, 1, fout);
+						setcounter(ftell(fin));
 						break;
 					case 2:
 						sector[0x0F] = 0x02;
-						if (fread(sector + 0x014, 1, 0x804, in) != 0x804) {
+						if (fread(sector + 0x014, 1, 0x804, fin) != 0x804) {
 							goto uneof;
 						}
 						sector[0x10] = sector[0x14];
@@ -232,12 +229,12 @@ static void ecc_computeblock(uint8_t *src,
 						sector[0x13] = sector[0x17];
 						[self generateECCEDCWithSector:sector type:2];
 						checkedc = edc_partial_computeblock(checkedc, sector + 0x10, 2336);
-						fwrite(sector + 0x10, 2336, 1, out);
-						setcounter(ftell(in));
+						fwrite(sector + 0x10, 2336, 1, fout);
+						setcounter(ftell(fin));
 						break;
 					case 3:
 						sector[0x0F] = 0x02;
-						if(fread(sector + 0x014, 1, 0x918, in) != 0x918) {
+						if (fread(sector + 0x014, 1, 0x918, fin) != 0x918) {
 							goto uneof;
 						}
 						sector[0x10] = sector[0x14];
@@ -246,14 +243,14 @@ static void ecc_computeblock(uint8_t *src,
 						sector[0x13] = sector[0x17];
 						[self generateECCEDCWithSector:sector type:3];
 						checkedc = edc_partial_computeblock(checkedc, sector + 0x10, 2336);
-						fwrite(sector + 0x10, 2336, 1, out);
-						setcounter(ftell(in));
+						fwrite(sector + 0x10, 2336, 1, fout);
+						setcounter(ftell(fin));
 						break;
 				}
 			}
 		}
 	}
-	if (fread(sector, 1, 4, in) != 4) {
+	if (fread(sector, 1, 4, fin) != 4) {
 		goto uneof;
 	}
 	//fprintf(stderr, "Decoded %ld bytes -> %ld bytes\n", ftell(in), ftell(out));
@@ -270,16 +267,16 @@ static void ecc_computeblock(uint8_t *src,
 		goto corrupt;
 	}
 	fprintf(stderr, "Done; file is OK\n");
-	fclose(in);
-	fclose(out);
+	fclose(fin);
+	fclose(fout);
 	
 	return;// 0;
 uneof:
 	fprintf(stderr, "Unexpected EOF!\n");
 corrupt:
 	fprintf(stderr, "Corrupt ECM file!\n");
-	fclose(in);
-	fclose(out);
+	fclose(fin);
+	fclose(fout);
 	return;// 1;
 }
 
