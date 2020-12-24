@@ -1,6 +1,0 @@
-/* Localized versions of Info.plist keys */
-
-CFBundleName = "ECM GUI";
-CFBundleShortVersionString = "ECM GUI version 0.1";
-CFBundleGetInfoString = "ECM GUI version 0.1, Copyright 2002 __MyCompanyName__.";
-NSHumanReadableCopyright = "Copyright 2002 __MyCompanyName__.";
